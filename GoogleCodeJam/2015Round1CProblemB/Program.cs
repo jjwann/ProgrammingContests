@@ -33,7 +33,6 @@ public class Program
                             
                             prob = a.GroupBy(x => x).Select(x => new { c = x.Key, p = (double)x.Count() / a.Length }).ToDictionary(x => x.c, x => x.p);
 
-                            //int subIndex;
                             subIndex = 0;
                             subIndices = new int[target.Length];
                             int index = 1;
@@ -42,7 +41,6 @@ public class Program
                             {
                                 if (target[0] == target[index])
                                 {
-                                    //subIndex = 0;
                                     for (int k = index; k < target.Length; k++)
                                     {
                                         if (k + 1 == target.Length && target[k - index] == target[k])
